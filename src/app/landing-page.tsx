@@ -163,7 +163,7 @@ export default function LandingPage() {
             <AnimatedSection>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-coral/10 rounded-full text-coral font-inter text-sm mb-6">
                 <Zap className="w-4 h-4" />
-                Track any book — Physical, Kindle, or PDF
+                Track any Book — Physical, Kindle, or PDF
               </span>
             </AnimatedSection>
 
