@@ -26,7 +26,7 @@ export default async function SignInPage({ searchParams }: LoginProps) {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="font-fraunces text-5xl font-light tracking-wide text-gray-900 mb-2">
-            Shelfie
+            BookShelfie
           </h1>
           <p className="font-inter text-gray-600">
             Welcome back to your reading journey

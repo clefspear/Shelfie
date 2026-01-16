@@ -405,9 +405,9 @@ export default function OnboardingContent({ userId, userEmail }: OnboardingConte
         </div>
       </div>
 
-      {/* Shelfie Branding */}
+      {/* BookShelfie Branding */}
       <div className="py-6 text-center">
-        <p className="font-fraunces text-xl text-gray-400">Shelfie</p>
+        <p className="font-fraunces text-xl text-gray-400">BookShelfie</p>
       </div>
     </div>
   );

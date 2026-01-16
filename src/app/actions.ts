@@ -34,7 +34,7 @@ export const signUpAction = async (formData: FormData) => {
   }
 
   if (user) {
-    // Don't insert into users table - only profiles matter for Shelfie
+    // Don't insert into users table - only profiles matter for BookShelfie
     return encodedRedirect(
       "success",
       "/sign-up",

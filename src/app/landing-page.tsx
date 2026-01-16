@@ -117,7 +117,7 @@ export default function LandingPage() {
         )}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-fraunces text-2xl text-gray-900">Shelfie</span>
+          <span className="font-fraunces text-2xl text-gray-900">BookShelfie</span>
           <div className="flex gap-3">
             <Link
               href="/sign-in"
@@ -205,16 +205,16 @@ export default function LandingPage() {
               <div className="bg-gradient-to-br from-cream to-[#FFF5ED] rounded-3xl p-8 border border-coral/10 shadow-2xl">
                 <div className="grid grid-cols-3 gap-6">
                   {[
-                    { img: 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=80', progress: 25 },
-                    { img: 'https://images.unsplash.com/photo-1491841573634-28140fc7ced7?w=400&q=80', progress: 50 },
-                    { img: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80', progress: 75 }
+                    { img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg', title: 'Pride and Prejudice', progress: 25 },
+                    { img: 'https://covers.openlibrary.org/b/id/7222161-L.jpg', title: '1984', progress: 50 },
+                    { img: 'https://covers.openlibrary.org/b/id/7222246-L.jpg', title: 'The Great Gatsby', progress: 75 }
                   ].map((book, idx) => (
                     <div 
                       key={idx} 
                       className="space-y-3 transition-transform duration-300 hover:-translate-y-2"
                     >
                       <div className="aspect-[2/3] rounded-xl overflow-hidden shadow-lg">
-                        <img src={book.img} alt="Book cover" className="w-full h-full object-cover" />
+                        <img src={book.img} alt={book.title} className="w-full h-full object-cover" />
                       </div>
                       <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                         <div 
@@ -333,12 +333,12 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-3">
                     {[
-                      { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180 },
-                      { title: "1984", author: "George Orwell", pages: 328 },
-                      { title: "Pride and Prejudice", author: "Jane Austen", pages: 432 },
+                      { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180, cover: "https://covers.openlibrary.org/b/id/7222246-M.jpg" },
+                      { title: "1984", author: "George Orwell", pages: 328, cover: "https://covers.openlibrary.org/b/id/7222161-M.jpg" },
+                      { title: "Pride and Prejudice", author: "Jane Austen", pages: 432, cover: "https://covers.openlibrary.org/b/id/8231856-M.jpg" },
                     ].map((book, idx) => (
                       <div key={idx} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                        <div className="w-10 h-14 bg-gradient-to-br from-coral/20 to-coral/40 rounded-md" />
+                        <img src={book.cover} alt={book.title} className="w-10 h-14 object-cover rounded-md shadow-sm" />
                         <div className="flex-1">
                           <p className="font-inter text-sm font-medium text-gray-900">{book.title}</p>
                           <p className="font-inter text-xs text-gray-500">{book.author} • {book.pages} pages</p>
@@ -367,7 +367,7 @@ export default function LandingPage() {
                 Your Shelf, Always Visible
               </h2>
               <p className="font-inter text-gray-600 mb-6">
-                The Shelfie iOS widget brings your currently reading books to your home screen. 
+                The BookShelfie iOS widget brings your currently reading books to your home screen. 
                 See your progress at a glance, and stay motivated without opening an app.
               </p>
               <ul className="space-y-3 font-inter text-gray-600">
@@ -398,7 +398,7 @@ export default function LandingPage() {
                 </div>
                 <div className="flex justify-center">
                   <div className="w-20 aspect-[2/3] rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=80" alt="Book" className="w-full h-full object-cover" />
+                    <img src="https://covers.openlibrary.org/b/id/7222246-M.jpg" alt="The Great Gatsby" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="mt-3">
@@ -496,10 +496,10 @@ export default function LandingPage() {
       <footer className="py-12 bg-cream border-t border-coral/10">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
           <p className="font-fraunces text-3xl font-light text-gray-900">
-            Shelfie
+            BookShelfie
           </p>
           <p className="font-inter text-gray-600">
-            Your reading companion
+            Reading with Friends
           </p>
           <div className="pt-4">
             <a

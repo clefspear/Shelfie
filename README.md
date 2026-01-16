@@ -1,19 +1,19 @@
-# 📚 Shelfie - Your Reading Life, Beautifully Simple
+# 📚 BookShelfie - Reading with Friends
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Shelfie Banner" width="100%" style="border-radius: 16px; margin-bottom: 24px;"/>
+  <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="BookShelfie Banner" width="100%" style="border-radius: 16px; margin-bottom: 24px;"/>
   
   **Track your reading progress. Share with friends. Celebrate every page.**
 
-  [Try Shelfie Now](https://bookshelfie.vercel.app) • [Report Bug](https://github.com/clefspear/shelfie/issues) • [Request Feature](https://github.com/clefspear/shelfie/issues)
+  [Try BookShelfie Now](https://bookshelfie.vercel.app) • [Report Bug](https://github.com/clefspear/bookshelfie/issues) • [Request Feature](https://github.com/clefspear/bookshelfie/issues)
 
 </div>
 
 ---
 
-## 📖 What is Shelfie?
+## 📖 What is BookShelfie?
 
-**Shelfie is the simplest way to track the books you're reading.** 
+**BookShelfie is the simplest way to track the books you're reading and share with friends.** 
 
 No complicated spreadsheets. No overwhelming features. Just a beautiful, cozy place to see your reading progress and share it with friends.
 
@@ -58,7 +58,7 @@ Connect with friends via phone number and see what they're reading. Discover new
 
 ### For Users (Non-Technical)
 
-1. **Visit** [Shelfie](https://2ba2c45c-57af-44d8-ba2f-88e1f789abdd.canvases.tempo.build)
+1. **Visit** [BookShelfie](https://bookshelfie.vercel.app)
 2. **Sign up** with your email
 3. **Complete your profile** — add your name, phone number, and create a password
 4. **Customize your avatar** — pick a color and optionally add a photo
@@ -135,8 +135,8 @@ That's it! No downloads required. Works on any device with a browser.
 
 ```bash
 # Clone the repository
-git clone https://github.com/clefspear/shelfie.git
-cd shelfie
+git clone https://github.com/clefspear/bookshelfie.git
+cd bookshelfie
 
 # Install dependencies
 npm install
@@ -220,7 +220,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <p>If you enjoy Shelfie, please ⭐ this repository!</p>
+  <p>If you enjoy BookShelfie, please ⭐ this repository!</p>
   
   <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&q=80" alt="Happy Reading" width="200" style="border-radius: 12px;"/>
   
