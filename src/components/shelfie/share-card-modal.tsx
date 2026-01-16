@@ -132,7 +132,7 @@ export default function ShareCardModal({
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `shelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
+      link.download = `bookshelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
       link.click();
       URL.revokeObjectURL(url);
     } finally {
@@ -156,7 +156,7 @@ export default function ShareCardModal({
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `shelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.download = `bookshelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
         link.click();
         URL.revokeObjectURL(url);
       } else if (platform.action === 'whatsapp') {
@@ -167,7 +167,7 @@ export default function ShareCardModal({
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `shelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.download = `bookshelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
         link.click();
         URL.revokeObjectURL(url);
       } else {
@@ -175,7 +175,7 @@ export default function ShareCardModal({
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `shelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.download = `bookshelfie-${book.title.replace(/\s+/g, '-').toLowerCase()}.png`;
         link.click();
         URL.revokeObjectURL(url);
       }
@@ -192,7 +192,7 @@ export default function ShareCardModal({
       const blob = await generateImage();
       if (!blob) return;
 
-      const file = new File([blob], 'shelfie-share.png', { type: 'image/png' });
+      const file = new File([blob], 'bookshelfie-share.png', { type: 'image/png' });
 
       if (navigator.share) {
         await navigator.share({
@@ -209,7 +209,7 @@ export default function ShareCardModal({
   };
 
   const copyShareText = () => {
-    const text = `I'm ${book.percentage}% through "${book.title}" by ${book.author} 📚 #Shelfie #reading`;
+    const text = `I'm ${book.percentage}% through "${book.title}" by ${book.author} 📚 #BookShelfie #reading`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -296,9 +296,9 @@ export default function ShareCardModal({
                 </div>
               </div>
 
-              {/* Shelfie Logo */}
+              {/* BookShelfie Logo */}
               <div className="absolute bottom-3 right-3 opacity-40">
-                <p className="font-fraunces text-sm text-gray-600">Shelfie</p>
+                <p className="font-fraunces text-sm text-gray-600">BookShelfie</p>
               </div>
             </div>
           </div>

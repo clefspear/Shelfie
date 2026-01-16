@@ -24,7 +24,7 @@ export default async function Signup(props: {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="font-fraunces text-5xl font-light tracking-wide text-gray-900 mb-2">
-            Shelfie
+            BookShelfie
           </h1>
           <p className="font-inter text-gray-600">
             Start your reading journey today

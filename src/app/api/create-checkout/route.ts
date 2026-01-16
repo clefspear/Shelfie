@@ -26,7 +26,7 @@ export async function POST(request: Request) {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: 'Shelfie Premium',
+              name: 'BookShelfie Premium',
               description: 'Unlimited books and premium features'
             },
             unit_amount: 499, // $4.99
