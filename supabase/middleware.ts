@@ -47,8 +47,9 @@ export const updateSession = async (request: NextRequest) => {
       return NextResponse.redirect(new URL("/sign-in", request.url));
     }
 
-    if (request.nextUrl.pathname === "/" && !error) {
-      return NextResponse.redirect(new URL("/", request.url));
+    // Redirect authenticated users from landing page to home
+    if (request.nextUrl.pathname === "/" && user && !error) {
+      return NextResponse.redirect(new URL("/home", request.url));
     }
 
     return response;

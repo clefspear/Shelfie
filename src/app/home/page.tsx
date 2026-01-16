@@ -31,12 +31,13 @@ export default async function HomePage() {
     .eq('status', 'reading')
     .order('updated_at', { ascending: false });
 
-  // Fetch friends activity
+  // Fetch accepted friendships with friend profiles
   const { data: friendships } = await supabase
     .from('friendships')
     .select(`
       friend_id,
       profiles!friendships_friend_id_fkey (
+        id,
         display_name,
         avatar_config
       )
@@ -46,11 +47,13 @@ export default async function HomePage() {
 
   const friendIds = friendships?.map(f => f.friend_id) || [];
   
+  // Fetch friends' currently reading books
   const { data: friendsBooks } = await supabase
     .from('books')
     .select(`
       *,
       profiles (
+        id,
         display_name,
         avatar_config
       )
@@ -58,13 +61,30 @@ export default async function HomePage() {
     .in('user_id', friendIds)
     .eq('status', 'reading')
     .order('updated_at', { ascending: false })
-    .limit(5);
+    .limit(10);
+
+  // Transform to FriendWithBook format for widget
+  const friendsWithBooks = friendsBooks?.map(book => ({
+    id: book.id,
+    user_id: book.user_id,
+    display_name: book.profiles?.display_name || 'Unknown',
+    avatar_config: book.profiles?.avatar_config || {},
+    book: {
+      id: book.id,
+      cover_url: book.cover_url,
+      title: book.title,
+      author: book.author,
+      percentage: book.percentage,
+      current_page: book.current_page,
+      total_pages: book.total_pages
+    }
+  })) || [];
 
   return (
     <ShelfieLayout>
       <HomeContent 
         initialBooks={books || []} 
-        friendsActivity={friendsBooks || []}
+        friendsWithBooks={friendsWithBooks}
         profile={profile}
       />
       <BottomNav />

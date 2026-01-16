@@ -2,10 +2,14 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Settings, BookOpen, FileText, LogOut, Crown } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Settings, BookOpen, FileText, LogOut, Crown, Quote, Pencil } from 'lucide-react';
 import { createClient } from '../../../supabase/client';
 import { useRouter } from 'next/navigation';
 import AvatarCustomizerModal from '@/components/shelfie/avatar-customizer-modal';
+import { cn } from '@/lib/utils';
 
 interface ProfileContentProps {
   profile: any;
@@ -15,8 +19,13 @@ interface ProfileContentProps {
   };
 }
 
-export default function ProfileContent({ profile, stats }: ProfileContentProps) {
+export default function ProfileContent({ profile: initialProfile, stats }: ProfileContentProps) {
+  const [profile, setProfile] = useState(initialProfile);
   const [showAvatarCustomizer, setShowAvatarCustomizer] = useState(false);
+  const [showQuoteEditor, setShowQuoteEditor] = useState(false);
+  const [favoriteQuote, setFavoriteQuote] = useState(profile.favorite_quote || '');
+  const [favoriteAuthor, setFavoriteAuthor] = useState(profile.favorite_author || '');
+  const [savingQuote, setSavingQuote] = useState(false);
   const router = useRouter();
   const supabase = createClient();
 
@@ -30,39 +39,90 @@ export default function ProfileContent({ profile, stats }: ProfileContentProps) 
     console.log('Manage subscription');
   };
 
+  const handleSaveQuote = async () => {
+    setSavingQuote(true);
+    try {
+      const { error } = await supabase
+        .from('profiles')
+        .update({ 
+          favorite_quote: favoriteQuote,
+          favorite_author: favoriteAuthor
+        })
+        .eq('id', profile.id);
+
+      if (!error) {
+        setProfile({ ...profile, favorite_quote: favoriteQuote, favorite_author: favoriteAuthor });
+        setShowQuoteEditor(false);
+      }
+    } catch (error) {
+      console.error('Failed to save quote:', error);
+    } finally {
+      setSavingQuote(false);
+    }
+  };
+
   const isPremium = profile.subscription_status === 'premium';
 
   return (
-    <div className="px-6 py-8 space-y-8">
+    <div className="px-6 py-6 space-y-6">
       {/* Header with Avatar */}
       <div className="text-center">
         <div 
           onClick={() => setShowAvatarCustomizer(true)}
-          className="w-24 h-24 rounded-full bg-gradient-to-br from-coral to-coral-light mx-auto mb-4 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-lg"
+          className={cn(
+            "w-20 h-20 rounded-full mx-auto mb-3 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-lg",
+            profile.avatar_config?.gradient 
+              ? `bg-gradient-to-br ${profile.avatar_config.gradient}` 
+              : "bg-gradient-to-br from-coral to-coral-light"
+          )}
         >
-          <span className="text-4xl font-inter font-medium text-white">
+          <span className="text-3xl font-inter font-medium text-white">
             {profile.display_name[0]}
           </span>
         </div>
         
-        <h1 className="font-fraunces text-3xl font-light tracking-wide text-gray-900 mb-1">
+        <h1 className="font-fraunces text-2xl font-light tracking-wide text-gray-900 mb-1">
           {profile.display_name}
         </h1>
         
         {isPremium && (
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-coral to-coral-light text-white text-sm font-inter">
-            <Crown className="w-4 h-4" />
-            Premium Member
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-coral to-coral-light text-white text-xs font-inter">
+            <Crown className="w-3 h-3" />
+            Premium
           </div>
         )}
-        
-        <p className="font-inter text-gray-500 text-sm mt-2">
-          {profile.phone_number}
-        </p>
+      </div>
+
+      {/* Favorite Quote Section */}
+      <div 
+        onClick={() => setShowQuoteEditor(true)}
+        className="bg-white rounded-xl p-4 border border-coral/10 hover:border-coral/30 cursor-pointer transition-all"
+      >
+        {profile.favorite_quote ? (
+          <div className="flex items-start gap-3">
+            <Quote className="w-4 h-4 text-coral/50 flex-shrink-0 mt-0.5" />
+            <div className="flex-1 min-w-0">
+              <p className="font-inter text-sm text-gray-700 italic leading-relaxed">
+                "{profile.favorite_quote}"
+              </p>
+              {profile.favorite_author && (
+                <p className="font-inter text-xs text-coral-light mt-1.5">
+                  — {profile.favorite_author}
+                </p>
+              )}
+            </div>
+            <Pencil className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
+          </div>
+        ) : (
+          <div className="flex items-center gap-3 text-gray-400">
+            <Quote className="w-4 h-4" />
+            <span className="font-inter text-sm">Add your favorite quote</span>
+          </div>
+        )}
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         <div className="bg-white rounded-xl p-6 border border-coral/10 text-center">
           <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-3">
             <BookOpen className="w-6 h-6 text-coral" />

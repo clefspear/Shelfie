@@ -272,7 +272,7 @@ export default function FriendsContent({
                         <div className="flex items-center gap-2">
                           <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden max-w-[120px]">
                             <div 
-                              className="h-full bg-coral rounded-full"
+                              className="h-full bg-gradient-to-r from-coral to-[#FF8E8E] rounded-full shadow-[0_0_6px_rgba(255,107,107,0.5)]"
                               style={{ width: `${book.percentage}%` }}
                             />
                           </div>

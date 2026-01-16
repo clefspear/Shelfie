@@ -111,6 +111,8 @@ export type Database = {
           avatar_config: Json | null
           created_at: string | null
           display_name: string
+          favorite_author: string | null
+          favorite_quote: string | null
           id: string
           phone_number: string
           subscription_status: string | null
@@ -120,6 +122,8 @@ export type Database = {
           avatar_config?: Json | null
           created_at?: string | null
           display_name: string
+          favorite_author?: string | null
+          favorite_quote?: string | null
           id: string
           phone_number: string
           subscription_status?: string | null
@@ -129,6 +133,8 @@ export type Database = {
           avatar_config?: Json | null
           created_at?: string | null
           display_name?: string
+          favorite_author?: string | null
+          favorite_quote?: string | null
           id?: string
           phone_number?: string
           subscription_status?: string | null

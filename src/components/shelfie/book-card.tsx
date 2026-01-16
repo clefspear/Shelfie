@@ -17,21 +17,12 @@ export default function BookCard({
   onClick,
   size = 'large' 
 }: BookCardProps) {
-  const sizes = {
-    small: 'w-[120px]',
-    medium: 'w-[80px]',
-    large: 'w-[200px]'
-  };
-
   return (
     <div 
-      className={cn(
-        "cursor-pointer transition-transform hover:scale-105 active:scale-95",
-        sizes[size]
-      )}
+      className="cursor-pointer transition-all hover:scale-[1.02] active:scale-[0.98] bg-white rounded-2xl p-3 border border-gray-100 hover:border-coral/20 hover:shadow-sm"
       onClick={onClick}
     >
-      <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.08)] mb-3">
+      <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-sm mb-2.5">
         <img 
           src={cover || 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=80'} 
           alt={title}
@@ -39,31 +30,24 @@ export default function BookCard({
         />
       </div>
       
-      <div className="space-y-2">
-        <h3 className={cn(
-          "font-inter font-medium text-gray-900 leading-tight",
-          size === 'large' ? 'text-lg line-clamp-2' : 'text-sm line-clamp-1'
-        )}>
+      <div className="space-y-1.5">
+        <h3 className="font-inter font-medium text-gray-900 leading-tight text-[13px] line-clamp-1">
           {title}
         </h3>
         
-        <p className={cn(
-          "font-inter text-coral-light",
-          size === 'large' ? 'text-sm' : 'text-xs'
-        )}>
+        <p className="font-inter text-gray-500 text-[11px] line-clamp-1">
           {author}
         </p>
         
-        <div className="space-y-1">
-          <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-coral rounded-full transition-all duration-400"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          
-          <div className="flex justify-end">
-            <span className="text-xs font-mono text-gray-500">
+        <div className="pt-1">
+          <div className="flex items-center gap-2">
+            <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-coral via-[#FF8080] to-[#FF9B9B] rounded-full transition-all duration-400"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+            <span className="text-[10px] font-mono text-coral font-semibold">
               {progress}%
             </span>
           </div>
