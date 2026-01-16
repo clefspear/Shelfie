@@ -38,14 +38,14 @@ export const signUpAction = async (formData: FormData) => {
     return encodedRedirect(
       "success",
       "/sign-up",
-      "Thanks for signing up! Please check your email for a verification link.",
+      "🎉 You're on the waitlist! We'll email you when BookShelfie launches. Get ready to track your reading journey!",
     );
   }
 
   return encodedRedirect(
     "success",
     "/sign-up",
-    "Thanks for signing up! Please check your email for a verification link.",
+    "🎉 You're on the waitlist! We'll email you when BookShelfie launches. Get ready to track your reading journey!",
   );
 };
 
@@ -53,6 +53,16 @@ export const signInAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const supabase = await createClient();
+
+  // Only allow specific email to sign in during waitlist period
+  const allowedEmails = ["peterazmy8991@gmail.com"];
+  if (!allowedEmails.includes(email.toLowerCase())) {
+    return encodedRedirect(
+      "error",
+      "/sign-in",
+      "You're on the waitlist! We'll notify you when BookShelfie launches. Stay tuned! 🚀"
+    );
+  }
 
   const { error } = await supabase.auth.signInWithPassword({
     email,

@@ -45,7 +45,7 @@ export default async function SignInPage({ searchParams }: LoginProps) {
                   className="text-coral font-medium hover:underline transition-all"
                   href="/sign-up"
                 >
-                  Sign up
+                  Join the Waitlist
                 </Link>
               </p>
             </div>
