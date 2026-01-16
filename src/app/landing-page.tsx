@@ -130,15 +130,9 @@ export default function LandingPage() {
           <div className="flex gap-3">
             <Link
               href="/sign-in"
-              className="px-4 py-2 font-inter text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="px-4 py-2 font-inter text-sm text-white bg-coral rounded-lg hover:bg-coral/90  hover:text-gray-900 transition-colors"
             >
               Sign In
-            </Link>
-            <Link
-              href="/sign-up"
-              className="px-4 py-2 font-inter text-sm text-white bg-coral rounded-lg hover:bg-coral/90 transition-colors"
-            >
-              Get Started
             </Link>
           </div>
         </div>
@@ -202,7 +196,7 @@ export default function LandingPage() {
                   href="/sign-up"
                   className="group inline-flex items-center justify-center px-8 py-4 text-white bg-coral rounded-xl hover:bg-coral/90 transition-all font-inter font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105"
                 >
-                  Start Reading for Free
+                  Join the Waitlist
                   <BookOpen className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
@@ -639,7 +633,7 @@ export default function LandingPage() {
             href="/sign-up"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-coral rounded-xl hover:bg-gray-50 transition-all font-inter font-medium text-lg shadow-xl hover:scale-105"
           >
-            Start Free Trial
+            Join Waitlist for Early Access
           </Link>
         </AnimatedSection>
       </section>

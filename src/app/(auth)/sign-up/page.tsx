@@ -27,7 +27,7 @@ export default async function Signup(props: {
             BookShelfie
           </h1>
           <p className="font-inter text-gray-600">
-            Start your reading journey today
+            Join the waitlist for early access
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default async function Signup(props: {
           <form className="flex flex-col space-y-6">
             <div className="space-y-2 text-center">
               <h2 className="font-fraunces text-3xl font-light tracking-tight text-gray-900">
-                Sign up
+                Join the Waitlist
               </h2>
               <p className="text-sm font-inter text-gray-600">
                 Already have an account?{" "}
@@ -95,10 +95,10 @@ export default async function Signup(props: {
 
             <SubmitButton
               formAction={signUpAction}
-              pendingText="Signing up..."
+              pendingText="Joining waitlist..."
               className="w-full h-12 bg-coral hover:bg-coral/90 text-white font-inter font-medium"
             >
-              Sign up
+              Join the Waitlist
             </SubmitButton>
 
             <FormMessage message={searchParams} />
