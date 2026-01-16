@@ -178,19 +178,13 @@ export default function LandingPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Link
                   href="/sign-up"
                   className="group inline-flex items-center justify-center px-8 py-4 text-white bg-coral rounded-xl hover:bg-coral/90 transition-all font-inter font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105"
                 >
-                  Start Reading Free
+                  Start Reading for Free
                   <BookOpen className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-                </Link>
-                <Link
-                  href="/sign-in"
-                  className="inline-flex items-center justify-center px-8 py-4 text-gray-900 bg-white rounded-xl hover:bg-gray-50 transition-all font-inter font-medium text-lg border border-coral/20"
-                >
-                  Sign In
                 </Link>
               </div>
             </AnimatedSection>
@@ -205,9 +199,9 @@ export default function LandingPage() {
               <div className="bg-gradient-to-br from-cream to-[#FFF5ED] rounded-3xl p-8 border border-coral/10 shadow-2xl">
                 <div className="grid grid-cols-3 gap-6">
                   {[
-                    { img: 'https://covers.openlibrary.org/b/id/8231856-L.jpg', title: 'Pride and Prejudice', progress: 25 },
-                    { img: 'https://covers.openlibrary.org/b/id/7222161-L.jpg', title: '1984', progress: 50 },
-                    { img: 'https://covers.openlibrary.org/b/id/7222246-L.jpg', title: 'The Great Gatsby', progress: 75 }
+                    { img: 'https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg', title: 'Pride and Prejudice', progress: 25 },
+                    { img: 'https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg', title: '1984', progress: 50 },
+                    { img: 'https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg', title: 'The Great Gatsby', progress: 75 }
                   ].map((book, idx) => (
                     <div 
                       key={idx} 
@@ -333,9 +327,9 @@ export default function LandingPage() {
                   </div>
                   <div className="space-y-3">
                     {[
-                      { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180, cover: "https://covers.openlibrary.org/b/id/7222246-M.jpg" },
-                      { title: "1984", author: "George Orwell", pages: 328, cover: "https://covers.openlibrary.org/b/id/7222161-M.jpg" },
-                      { title: "Pride and Prejudice", author: "Jane Austen", pages: 432, cover: "https://covers.openlibrary.org/b/id/8231856-M.jpg" },
+                      { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180, cover: "https://covers.openlibrary.org/b/isbn/9780743273565-M.jpg" },
+                      { title: "1984", author: "George Orwell", pages: 328, cover: "https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg" },
+                      { title: "Pride and Prejudice", author: "Jane Austen", pages: 432, cover: "https://covers.openlibrary.org/b/isbn/9780141439518-M.jpg" },
                     ].map((book, idx) => (
                       <div key={idx} className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                         <img src={book.cover} alt={book.title} className="w-10 h-14 object-cover rounded-md shadow-sm" />
@@ -390,25 +384,40 @@ export default function LandingPage() {
 
             <AnimatedSection delay={200} className="flex-1">
               <div 
-                className="bg-gradient-to-br from-cream to-[#FFF5ED] rounded-[32px] p-6 border border-coral/10 shadow-xl max-w-xs mx-auto hover:scale-105 transition-transform duration-300"
+                className="bg-gradient-to-br from-cream to-[#FFF5ED] rounded-[32px] p-6 border border-coral/10 shadow-xl max-w-sm mx-auto hover:scale-105 transition-transform duration-300"
               >
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex items-center gap-2 mb-4">
                   <Smartphone className="w-4 h-4 text-coral" />
                   <span className="text-xs font-inter text-gray-500">iOS Widget Preview</span>
                 </div>
-                <div className="flex justify-center">
-                  <div className="w-20 aspect-[2/3] rounded-lg overflow-hidden shadow-md">
-                    <img src="https://covers.openlibrary.org/b/id/7222246-M.jpg" alt="The Great Gatsby" className="w-full h-full object-cover" />
-                  </div>
-                </div>
-                <div className="mt-3">
-                  <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-coral to-[#FF8E8E] rounded-full w-[65%]" />
-                  </div>
-                  <div className="flex justify-between mt-1.5">
-                    <span className="text-xs font-inter text-gray-600">The Great Gatsby</span>
-                    <span className="text-xs font-mono text-coral">65%</span>
-                  </div>
+                <div className="space-y-3">
+                  {[
+                    { name: 'Sarah', avatar: '🧑‍🦰', avatarBg: 'bg-pink-100', book: 'The Great Gatsby', progress: 65 },
+                    { name: 'Marcus', avatar: '👨🏽', avatarBg: 'bg-amber-100', book: 'Atomic Habits', progress: 42 },
+                    { name: 'Emma', avatar: '👩🏻', avatarBg: 'bg-purple-100', book: '1984', progress: 88 },
+                    { name: 'Jordan', avatar: '🧑🏿', avatarBg: 'bg-green-100', book: 'Dune', progress: 23 },
+                  ].map((user, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-2 rounded-lg bg-white/60">
+                      <div className={`w-8 h-8 rounded-full ${user.avatarBg} flex items-center justify-center text-base`}>
+                        {user.avatar}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-xs font-inter font-medium text-gray-800 truncate">{user.name}</span>
+                          <span className="text-xs font-mono text-coral ml-2">{user.progress}%</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
+                            <div 
+                              className="h-full bg-gradient-to-r from-coral to-[#FF8E8E] rounded-full transition-all"
+                              style={{ width: `${user.progress}%` }}
+                            />
+                          </div>
+                        </div>
+                        <span className="text-[10px] font-inter text-gray-500 truncate block">{user.book}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </AnimatedSection>
