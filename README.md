@@ -5,7 +5,7 @@
   
   **Track your reading progress. Share with friends. Celebrate every page.**
 
-  [Try Shelfie Now](https://2ba2c45c-57af-44d8-ba2f-88e1f789abdd.canvases.tempo.build) • [Report Bug](https://github.com/clefspear/shelfie/issues) • [Request Feature](https://github.com/clefspear/shelfie/issues)
+  [Try Shelfie Now](https://bookshelfie.vercel.app) • [Report Bug](https://github.com/clefspear/shelfie/issues) • [Request Feature](https://github.com/clefspear/shelfie/issues)
 
 </div>
 
