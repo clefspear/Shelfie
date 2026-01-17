@@ -1,7 +1,7 @@
 # 📚 BookShelfie - Reading with Friends
 
 <div align="center">
-  <img src="https://imgur.com/d8McKRN" alt="BookShelfie Banner" width="100%" style="border-radius: 16px; margin-bottom: 24px;"/>
+  <img src="https://i.imgur.com/d8McKRN.png" alt="BookShelfie Banner" width="100%" style="border-radius: 16px; margin-bottom: 24px;"/>
   
   **Track your reading progress. Share with friends. Celebrate every page.**
 
@@ -20,7 +20,7 @@ No complicated spreadsheets. No overwhelming features. Just a beautiful, cozy pl
 Think of it like a digital bookshelf on your phone's home screen — glance at it, see what you're reading, update your progress, and keep going.
 
 <div align="center">
-  <img src="https://imgur.com/GRwwpZk" alt="Reading Preview" width="300" style="border-radius: 12px;"/>
+  <img src="https://i.imgur.com/GRwwpZk.png" alt="Reading Preview" width="300" style="border-radius: 12px;"/>
 </div>
 
 ---
