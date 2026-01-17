@@ -69,32 +69,6 @@ That's it! No downloads required. Works on any device with a browser.
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&q=80" alt="Home Screen" width="200" style="border-radius: 8px;"/>
-        <br/>
-        <em>Your Reading Shelf</em>
-      </td>
-      <td align="center">
-        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=300&q=80" alt="Progress Tracking" width="200" style="border-radius: 8px;"/>
-        <br/>
-        <em>Track Progress</em>
-      </td>
-      <td align="center">
-        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=300&q=80" alt="Share Cards" width="200" style="border-radius: 8px;"/>
-        <br/>
-        <em>Share Your Journey</em>
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
 ## 💡 How It Works
 
 ```
