@@ -1,8 +1,9 @@
 # 📚 BookShelfie - Reading with Friends
 
 <div align="center">
+ <a href="https://bookshelfie.vercel.app">
   <img src="https://i.imgur.com/d8McKRN.png" alt="BookShelfie Banner" width="100%" style="border-radius: 16px; margin-bottom: 24px;"/>
-  
+</a>  
   **Track your reading progress. Share with friends. Celebrate every page.**
 
   [Try BookShelfie Now](https://bookshelfie.vercel.app) • [Report Bug](https://github.com/clefspear/bookshelfie/issues) • [Request Feature](https://github.com/clefspear/bookshelfie/issues)
