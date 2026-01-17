@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE366EC22F1B48D400972293 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE366EC12F1B48D400972293 /* WidgetKit.framework */; };
+		EE366EC42F1B48D400972293 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE366EC32F1B48D400972293 /* SwiftUI.framework */; };
+		EE366ED52F1B48D500972293 /* ShelfieWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EE366EBF2F1B48D400972293 /* ShelfieWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EE366F072F1BD58D00972293 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EE366F062F1BD58D00972293 /* KeychainAccess */; };
+		EE366F092F1BD59400972293 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EE366F082F1BD59400972293 /* KeychainAccess */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE366E9F2F1B489400972293 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE366E892F1B489300972293 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE366E902F1B489300972293;
+			remoteInfo = BookShelfie;
+		};
+		EE366EA92F1B489400972293 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE366E892F1B489300972293 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE366E902F1B489300972293;
+			remoteInfo = BookShelfie;
+		};
+		EE366ED32F1B48D500972293 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE366E892F1B489300972293 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE366EBE2F1B48D400972293;
+			remoteInfo = ShelfieWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE366EDA2F1B48D500972293 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EE366ED52F1B48D500972293 /* ShelfieWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE366E912F1B489300972293 /* BookShelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE366E9E2F1B489400972293 /* BookShelfieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookShelfieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE366EA82F1B489400972293 /* BookShelfieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookShelfieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE366EBF2F1B48D400972293 /* ShelfieWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShelfieWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE366EC12F1B48D400972293 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EE366EC32F1B48D400972293 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EE366EE12F1B49FD00972293 /* ShelfieWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShelfieWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EE366ED62F1B48D500972293 /* Exceptions for "ShelfieWidgetExtension" folder in "ShelfieWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EE366EBE2F1B48D400972293 /* ShelfieWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EE366E932F1B489300972293 /* BookShelfie */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BookShelfie;
+			sourceTree = "<group>";
+		};
+		EE366EA12F1B489400972293 /* BookShelfieTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BookShelfieTests;
+			sourceTree = "<group>";
+		};
+		EE366EAB2F1B489400972293 /* BookShelfieUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BookShelfieUITests;
+			sourceTree = "<group>";
+		};
+		EE366EC52F1B48D400972293 /* ShelfieWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EE366ED62F1B48D500972293 /* Exceptions for "ShelfieWidgetExtension" folder in "ShelfieWidgetExtensionExtension" target */,
+			);
+			path = ShelfieWidgetExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE366E8E2F1B489300972293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE366F072F1BD58D00972293 /* KeychainAccess in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366E9B2F1B489400972293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EA52F1B489400972293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EBC2F1B48D400972293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE366EC42F1B48D400972293 /* SwiftUI.framework in Frameworks */,
+				EE366EC22F1B48D400972293 /* WidgetKit.framework in Frameworks */,
+				EE366F092F1BD59400972293 /* KeychainAccess in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE366E882F1B489300972293 = {
+			isa = PBXGroup;
+			children = (
+				EE366EE12F1B49FD00972293 /* ShelfieWidgetExtensionExtension.entitlements */,
+				EE366E932F1B489300972293 /* BookShelfie */,
+				EE366EA12F1B489400972293 /* BookShelfieTests */,
+				EE366EAB2F1B489400972293 /* BookShelfieUITests */,
+				EE366EC52F1B48D400972293 /* ShelfieWidgetExtension */,
+				EE366EC02F1B48D400972293 /* Frameworks */,
+				EE366E922F1B489300972293 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE366E922F1B489300972293 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE366E912F1B489300972293 /* BookShelfie.app */,
+				EE366E9E2F1B489400972293 /* BookShelfieTests.xctest */,
+				EE366EA82F1B489400972293 /* BookShelfieUITests.xctest */,
+				EE366EBF2F1B48D400972293 /* ShelfieWidgetExtensionExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE366EC02F1B48D400972293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE366EC12F1B48D400972293 /* WidgetKit.framework */,
+				EE366EC32F1B48D400972293 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE366E902F1B489300972293 /* BookShelfie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE366EB22F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfie" */;
+			buildPhases = (
+				EE366E8D2F1B489300972293 /* Sources */,
+				EE366E8E2F1B489300972293 /* Frameworks */,
+				EE366E8F2F1B489300972293 /* Resources */,
+				EE366EDA2F1B48D500972293 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE366ED42F1B48D500972293 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EE366E932F1B489300972293 /* BookShelfie */,
+			);
+			name = BookShelfie;
+			packageProductDependencies = (
+				EE366F062F1BD58D00972293 /* KeychainAccess */,
+			);
+			productName = BookShelfie;
+			productReference = EE366E912F1B489300972293 /* BookShelfie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE366E9D2F1B489400972293 /* BookShelfieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE366EB52F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfieTests" */;
+			buildPhases = (
+				EE366E9A2F1B489400972293 /* Sources */,
+				EE366E9B2F1B489400972293 /* Frameworks */,
+				EE366E9C2F1B489400972293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE366EA02F1B489400972293 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EE366EA12F1B489400972293 /* BookShelfieTests */,
+			);
+			name = BookShelfieTests;
+			packageProductDependencies = (
+			);
+			productName = BookShelfieTests;
+			productReference = EE366E9E2F1B489400972293 /* BookShelfieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE366EA72F1B489400972293 /* BookShelfieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE366EB82F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfieUITests" */;
+			buildPhases = (
+				EE366EA42F1B489400972293 /* Sources */,
+				EE366EA52F1B489400972293 /* Frameworks */,
+				EE366EA62F1B489400972293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE366EAA2F1B489400972293 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EE366EAB2F1B489400972293 /* BookShelfieUITests */,
+			);
+			name = BookShelfieUITests;
+			packageProductDependencies = (
+			);
+			productName = BookShelfieUITests;
+			productReference = EE366EA82F1B489400972293 /* BookShelfieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		EE366EBE2F1B48D400972293 /* ShelfieWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE366ED72F1B48D500972293 /* Build configuration list for PBXNativeTarget "ShelfieWidgetExtensionExtension" */;
+			buildPhases = (
+				EE366EBB2F1B48D400972293 /* Sources */,
+				EE366EBC2F1B48D400972293 /* Frameworks */,
+				EE366EBD2F1B48D400972293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EE366EC52F1B48D400972293 /* ShelfieWidgetExtension */,
+			);
+			name = ShelfieWidgetExtensionExtension;
+			packageProductDependencies = (
+				EE366F082F1BD59400972293 /* KeychainAccess */,
+			);
+			productName = ShelfieWidgetExtensionExtension;
+			productReference = EE366EBF2F1B48D400972293 /* ShelfieWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE366E892F1B489300972293 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					EE366E902F1B489300972293 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					EE366E9D2F1B489400972293 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = EE366E902F1B489300972293;
+					};
+					EE366EA72F1B489400972293 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = EE366E902F1B489300972293;
+					};
+					EE366EBE2F1B48D400972293 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = EE366E8C2F1B489300972293 /* Build configuration list for PBXProject "BookShelfie" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE366E882F1B489300972293;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EE366F052F1BD58D00972293 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EE366E922F1B489300972293 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE366E902F1B489300972293 /* BookShelfie */,
+				EE366E9D2F1B489400972293 /* BookShelfieTests */,
+				EE366EA72F1B489400972293 /* BookShelfieUITests */,
+				EE366EBE2F1B48D400972293 /* ShelfieWidgetExtensionExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE366E8F2F1B489300972293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366E9C2F1B489400972293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EA62F1B489400972293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EBD2F1B48D400972293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE366E8D2F1B489300972293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366E9A2F1B489400972293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EA42F1B489400972293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE366EBB2F1B48D400972293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE366EA02F1B489400972293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE366E902F1B489300972293 /* BookShelfie */;
+			targetProxy = EE366E9F2F1B489400972293 /* PBXContainerItemProxy */;
+		};
+		EE366EAA2F1B489400972293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE366E902F1B489300972293 /* BookShelfie */;
+			targetProxy = EE366EA92F1B489400972293 /* PBXContainerItemProxy */;
+		};
+		EE366ED42F1B48D500972293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE366EBE2F1B48D400972293 /* ShelfieWidgetExtensionExtension */;
+			targetProxy = EE366ED32F1B48D500972293 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE366EB02F1B489400972293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE366EB12F1B489400972293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE366EB32F1B489400972293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookShelfie/BookShelfie.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE366EB42F1B489400972293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookShelfie/BookShelfie.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE366EB62F1B489400972293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookShelfie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookShelfie";
+			};
+			name = Debug;
+		};
+		EE366EB72F1B489400972293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookShelfie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookShelfie";
+			};
+			name = Release;
+		};
+		EE366EB92F1B489400972293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookShelfie;
+			};
+			name = Debug;
+		};
+		EE366EBA2F1B489400972293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookShelfie;
+			};
+			name = Release;
+		};
+		EE366ED82F1B48D500972293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ShelfieWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShelfieWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShelfieWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfie.ShelfieWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE366ED92F1B48D500972293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ShelfieWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4G629ZVK23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShelfieWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShelfieWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BookShelfie.ShelfieWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE366E8C2F1B489300972293 /* Build configuration list for PBXProject "BookShelfie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE366EB02F1B489400972293 /* Debug */,
+				EE366EB12F1B489400972293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE366EB22F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE366EB32F1B489400972293 /* Debug */,
+				EE366EB42F1B489400972293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE366EB52F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE366EB62F1B489400972293 /* Debug */,
+				EE366EB72F1B489400972293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE366EB82F1B489400972293 /* Build configuration list for PBXNativeTarget "BookShelfieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE366EB92F1B489400972293 /* Debug */,
+				EE366EBA2F1B489400972293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE366ED72F1B48D500972293 /* Build configuration list for PBXNativeTarget "ShelfieWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE366ED82F1B48D500972293 /* Debug */,
+				EE366ED92F1B48D500972293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE366F052F1BD58D00972293 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE366F062F1BD58D00972293 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE366F052F1BD58D00972293 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		EE366F082F1BD59400972293 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE366F052F1BD58D00972293 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EE366E892F1B489300972293 /* Project object */;
+}
