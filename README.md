@@ -105,36 +105,6 @@ That's it! No downloads required. Works on any device with a browser.
 - **Payments:** Stripe (for Premium features)
 - **Image Generation:** html2canvas
 
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/clefspear/bookshelfie.git
-cd bookshelfie
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-# Copy .env.example to .env.local and fill in your Supabase credentials
-
-# Run the development server
-npm run dev
-
-# Open http://localhost:3000
-```
-
-### Environment Variables Needed
-```
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-SUPABASE_SERVICE_KEY=your_service_key
-STRIPE_SECRET_KEY=your_stripe_key
-STRIPE_WEBHOOK_SECRET=your_webhook_secret
-```
-
----
-
 ## 🗺️ Roadmap
 
 - [x] Book search with automatic page detection
