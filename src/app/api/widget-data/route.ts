@@ -57,8 +57,8 @@ export async function GET(request: Request) {
 
       friendsReading =
         data?.map((book) => ({
-          friend_name: book.profiles?.display_name,
-          friend_avatar: book.profiles?.avatar_config,
+          friend_name: (book as any).profiles?.display_name,
+          friend_avatar: (book as any).profiles?.avatar_config,
           title: book.title,
           cover_url: book.cover_url,
           current_page: book.current_page,
