@@ -124,9 +124,7 @@ export default function LandingPage() {
         )}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-fraunces text-2xl text-gray-900">
-            BookShelfie
-          </span>
+          <img src="/logo.png" alt="BookShelfie" className="h-8 w-auto" />
           <div className="flex gap-3">
             <Link
               href="/sign-in"
