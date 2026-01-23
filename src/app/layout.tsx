@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/logo.png",
-        width: 1200,
-        height: 1200,
-        alt: "Book Shelfie - Reading, with Friends.",
+        width: 356,
+        height: 325,
+        alt: "Reading, with Friends.",
       },
     ],
     siteName: "Book Shelfie",
