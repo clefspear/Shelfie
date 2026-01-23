@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description:
     "Track your reading progress, share with friends, and celebrate every page.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
