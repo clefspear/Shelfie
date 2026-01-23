@@ -8,7 +8,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BookShelfie - Reading with Friends",
-  description: "Track your reading progress, share with friends, and celebrate every page.",
+  description:
+    "Track your reading progress, share with friends, and celebrate every page.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      
       <body className={inter.className}>
         {children}
         <TempoInit />

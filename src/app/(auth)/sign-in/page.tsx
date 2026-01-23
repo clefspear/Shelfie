@@ -25,9 +25,9 @@ export default async function SignInPage({ searchParams }: LoginProps) {
     <div className="flex min-h-screen flex-col items-center justify-center bg-cream px-4 py-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="font-fraunces text-5xl font-light tracking-wide text-gray-900 mb-2">
-            BookShelfie
-          </h1>
+          <div className="flex justify-center mb-4">
+            <img src="/logo.png" alt="BookShelfie" className="h-16 w-auto" />
+          </div>
           <p className="font-inter text-gray-600">
             Welcome back to your reading journey
           </p>
@@ -52,14 +52,17 @@ export default async function SignInPage({ searchParams }: LoginProps) {
 
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-inter font-medium">
-                  Email
+                <Label
+                  htmlFor="email"
+                  className="text-sm font-inter font-medium"
+                >
+                  Email or Phone Number
                 </Label>
                 <Input
                   id="email"
                   name="email"
-                  type="email"
-                  placeholder="you@example.com"
+                  type="text"
+                  placeholder="you@example.com or +1 (555) 123-4567"
                   required
                   className="w-full h-12 border-coral/20 focus:border-coral"
                 />
@@ -67,7 +70,10 @@ export default async function SignInPage({ searchParams }: LoginProps) {
 
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <Label htmlFor="password" className="text-sm font-inter font-medium">
+                  <Label
+                    htmlFor="password"
+                    className="text-sm font-inter font-medium"
+                  >
                     Password
                   </Label>
                   <Link
